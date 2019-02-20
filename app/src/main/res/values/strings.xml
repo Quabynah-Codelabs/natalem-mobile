@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Natalem</string>
+    <string name="app_name">Nat@l3m</string>
+    <string name="empty"/>
+    <string name="calculate_date">Proceed</string>
+    <string name="computing">Computing day…</string>
+    <string name="get_started">Let\'s get started</string>
 </resources>
