@@ -5,13 +5,11 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
@@ -19,9 +17,16 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
     }
 }
+
+ext {
+    // query git for the SHA, Tag and commit count. Use these to automate versioning.
+    gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+    gitCommitCount = Integer.parseInt('git rev-list --count HEAD'.execute([], project.rootDir).text.trim())
+}
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

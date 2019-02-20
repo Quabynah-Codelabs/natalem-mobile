@@ -1,11 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="NatalemTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NatalemTheme.Button" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="iconPadding">12dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
     </style>
 
 </resources>
