@@ -37,6 +37,7 @@ class MainActivity : BaseActivity() {
             calculateDateOfBirth(year, month, day, object : OnDayRetrievedListener {
                 override fun onDayRetrieved(result: String) {
                     binding.datePickerButton.isEnabled = true
+                    hasPickedDate = false
                     binding.datePickerButton.text = getString(R.string.get_started)
 
                     binding.dateContent.visibility = View.VISIBLE

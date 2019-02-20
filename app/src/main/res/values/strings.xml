@@ -4,4 +4,5 @@
     <string name="calculate_date">Proceed</string>
     <string name="computing">Computing day…</string>
     <string name="get_started">Let\'s get started</string>
+    <string name="app_desc">Get the day of the week of any date with just a click!</string>
 </resources>
