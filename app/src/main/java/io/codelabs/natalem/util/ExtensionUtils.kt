@@ -1,7 +1,5 @@
 package io.codelabs.natalem.util
 
-import android.os.Handler
-import androidx.lifecycle.Observer
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import io.codelabs.natalem.core.BaseActivity
@@ -18,12 +16,8 @@ fun BaseActivity.calculateDateOfBirth(year: Int, month: Int, day: Int, listener:
         val operation = WorkManager.getInstance().enqueue(workRequest)
 
         uiScope.launch {
-            Handler().postDelayed({
-                operation.state.observe(this@calculateDateOfBirth, Observer {
-                    debugLog(it.toString())
-                    listener.onDayRetrieved(it.toString())
-                })
-            },3000)
+            debugLog(operation)
+            listener.onDayRetrieved(operation.toString())
         }
 
     }

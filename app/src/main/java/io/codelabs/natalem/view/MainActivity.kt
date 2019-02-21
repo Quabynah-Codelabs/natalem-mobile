@@ -54,11 +54,11 @@ class MainActivity : BaseActivity() {
 
     fun onDatePicked(year: Int, month: Int, day: Int) {
         this.year = year
-        this.month = month
+        this.month = month.plus(1)
         this.day = day
         debugLog("Year -> $year, Month -> $month, Day -> $day")
         hasPickedDate = true
-        binding.dateContent.text = String.format("You selected : %d/%d/%d", day, month, year)
+        binding.dateContent.text = String.format("You selected : %d/%d/%d", this.day, this.month, this.year)
 
         // Show date picked
         TransitionManager.beginDelayedTransition(binding.container)
